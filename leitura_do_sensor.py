@@ -33,7 +33,6 @@ while(ensaio != 0):
         c += 1
 
     print(f"\nquantidade de dados {c}\n")
-    print("teste ")
 
     with open (f"ensaios/ensaio{ensaio}sensor 2.txt",'w') as arquivo:
         for c, d in zip(s2,segundos):
