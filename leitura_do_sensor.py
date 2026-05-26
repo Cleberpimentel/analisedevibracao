@@ -33,6 +33,11 @@ while(ensaio != 0):
         c += 1
 
     print(f"\nquantidade de dados {c}\n")
+    print("teste ")
+
+    with open (f"ensaios/ensaio{ensaio}sensor 2.txt",'w') as arquivo:
+        for c, d in zip(s2,segundos):
+            arquivo.write(f"{c}\t{d}\n")
 
     #escreve os dados lidos no sensor 1 em um arquivo
     with open (f"ensaios/ensaio{ensaio}sensor1.txt",'w') as arquivo:
@@ -40,11 +45,6 @@ while(ensaio != 0):
             arquivo.write(f"{a}\t{b}\n")
 
     #escreve os dados lidos no sensor 1 em um arquivo
-
-    with open (f"ensaios/ensaio{ensaio}sensor 2.txt",'w') as arquivo:
-        for c, d in zip(s2,segundos):
-            arquivo.write(f"{c}\t{d}\n")
-
     fig1, ax = plt.subplots()
     ax.plot(segundos, s1)
     # plt.xticks(np.arange(0, 11, 0.01))
